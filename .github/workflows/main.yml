@@ -1,0 +1,14 @@
+name: NPM CI
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - run: npm install
+    - run: npm run build
